@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import './App.css'
-import SharedLoyaout from './components/SharedLoyaout'
+import SharedLoyaout from './components/SharedLayout/SharedLayout'
 import { lazy } from 'react'
 
 const Home = lazy(() => import("./pages/Home"));
@@ -12,7 +12,7 @@ function App() {
     <Routes>
       <Route path='/' element={<SharedLoyaout />}>
         <Route index element={<Home />}/>
-        <Route path='movies' element={<Countries />}/>
+        <Route path='countries' element={<Countries />}/>
         <Route path='about' element={<About />}/>
       </Route>
     </Routes>

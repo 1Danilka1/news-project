@@ -1,0 +1,50 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #030163;
+    height: 100px;
+}
+
+.image_container {
+    background-color: #fff;
+    border-radius: 60%;
+    margin-left: 50px;
+}
+
+img {
+    height: 70px;
+    width: 130px;
+}
+
+.navigation {
+    width: 600px;
+    padding-right: 400px;
+}
+
+.list_item {
+    list-style: none;  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+}
+
+.list_item p {
+    font: 20px Montserrat;   
+    color: #fff;
+}
+
+.list_item p:hover {
+    color: #c41b34;
+    font-weight: 700;
+}
+
+.bottom_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #030163;
+    height: 70px;
+    color: #fff;
+    font: 8px Montserrat;
+}
