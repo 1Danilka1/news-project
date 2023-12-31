@@ -5,11 +5,21 @@
     border: 1px solid black;
     border-radius: 5px;
     width: 400px;
-    height: 470px;
+    height: 500px;
 }
 
 .img {
     width: 400px;
     height: 250px;
     border-radius: 5px;
+}
+
+.title {
+    font: 23px 'Roboto Condensed';
+}
+
+.text {
+    font: 15px 'Roboto Condensed';
+    margin-top: 15px;
+    text-align: center;
 }

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import NewsCard from "../components/NewsCard/NewsCard";
+import css from "./Home.module.css";
 
 function Home() {
   const [news, setNews] = useState([]);
@@ -20,35 +21,27 @@ function Home() {
 
   return (
     <main>
-      <h1>News from around the world</h1>
-
-      <p>
+      <h1 className={css.title}>News from around the world</h1>
+      <p className={css.text}>
         Here you can see and read news from all world. Enjoy!
       </p>
-
-      <ul>
-        {news.map((article, index) => (
-          <li key={index}>
-            <NewsCard
-              title={article.title}
-              author={article.author}
-              about={article.description}
-              urlTo={article.url}
-              image={article.urlToImage}
-            />
-          </li>
-        ))}
-      </ul>
+      <div className={css.container}>
+        <ul className={css.list_item}>
+          {news.map((article, index) => (
+            <li key={index}>
+              <NewsCard
+                title={article.title}
+                author={article.author}
+                about={article.description}
+                urlTo={article.url}
+                image={article.urlToImage}
+              />
+            </li>
+          ))}
+        </ul>
+      </div>
     </main>
   );
 }
 
 export default Home;
-
-{
-  /* <strong>{article.title}</strong>
-            <p>{article.description}</p>
-            <a href={article.url} target="_blank" rel="noopener noreferrer">
-              Read more
-            </a> */
-}

@@ -8,9 +8,9 @@ export default function NewsCard({ title, author, about, urlTo, image }) {
             <img className={css.img} src={image} alt="image-of-news" />
         </div>
         <div>
-            <h1>{title}</h1>
-            <p>{about}</p>
-            <p>{author}</p>
+            <h1 className={css.title}>{title}</h1>
+            <p className={css.text}>{about}</p>
+            <p className={css.text}>Author: {author}</p>
         </div>
         <div>
             <a href={urlTo} target='blank'>Read more</a>
