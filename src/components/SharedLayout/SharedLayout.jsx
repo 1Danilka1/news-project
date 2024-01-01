@@ -17,6 +17,11 @@ function SharedLayout() {
             <ul className={css.list_item}>
               <li>
                 <Link to="/">
+                  <p>Home</p>
+                </Link>
+              </li>
+              <li>
+                <Link to="/news">
                   <p>World</p>
                 </Link>
               </li>

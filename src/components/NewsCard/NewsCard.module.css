@@ -24,23 +24,16 @@
     text-align: center;
 }
 
-.btn {
-    border: 1px solid #c41b34;
-    background-color: #c41b34;
-    border-radius: 12px;
-    padding: 8px 0;
-}
-
-.btn:hover {
-    background-color: #fff;
-}
-
 .link_to_info {
     padding: 8px 20px;
+    border: 2px solid #c41b34;
+    border-radius: 12px;
+    background-color: #c41b34;
     color: #fff;
+    font: 15px 'Roboto Condensed';
 }
 
 .link_to_info:hover {
     color: #c41b34;
-    font-weight: bold;
+    background-color: #fff;
 }

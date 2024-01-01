@@ -13,11 +13,9 @@ export default function NewsCard({ title, author, about, urlTo, image }) {
         <p className={css.text}>Author: {author}</p>
       </div>
       <div>
-        <button className={css.btn}>
           <a href={urlTo} target="blank" className={css.link_to_info}>
             Read more
           </a>
-        </button>
       </div>
     </div>
   );
