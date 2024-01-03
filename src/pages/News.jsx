@@ -5,9 +5,9 @@ import { Link, useLocation } from "react-router-dom";
 
 function News() {
   const [news, setNews] = useState([]);
-  const location = useLocation()
+  const location = useLocation();
 
-  useEffect(() => {
+  const fetchNews = () => {
     fetch(
       "https://newsapi.org/v2/everything?q=world&apiKey=d526f51e3d9a4f0dba138594e06c3b1f"
     )
@@ -19,6 +19,10 @@ function News() {
       .catch((error) => {
         console.log(error);
       });
+  };
+
+  useEffect(() => {
+    fetchNews();
   }, []);
 
   return (
@@ -31,7 +35,7 @@ function News() {
         <ul className={css.list_item}>
           {news.map((article, index) => (
             <li key={index}>
-              <Link to={`/${index}`} state={{ from: location}}>
+              <Link to={`/${index}`} state={{ from: location }}>
                 Link to news
               </Link>
             </li>
@@ -44,10 +48,12 @@ function News() {
 
 export default News;
 
-{/* <NewsCard
+{
+  /* <NewsCard
                   title={article.title}
                   author={article.author}
                   about={article.description}
                   urlTo={article.url}
                   image={article.urlToImage}
-                /> */}
+                /> */
+}
