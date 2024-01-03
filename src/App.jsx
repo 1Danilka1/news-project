@@ -15,7 +15,7 @@ function App() {
       <Route path='/' element={<SharedLoyaout />}>
         <Route index element={<Home />}/>
         <Route path='news' element={<News />} />
-        <Route path=':id' element={<NewsDetails />}/>        
+        <Route path=':index' element={<NewsDetails />}/>        
         <Route path='countries' element={<Countries />}/>
         <Route path='about' element={<About />}/>
       </Route>

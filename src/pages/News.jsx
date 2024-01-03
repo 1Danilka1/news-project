@@ -36,7 +36,8 @@ function News() {
           {news.map((article, index) => (
             <li key={index}>
               <Link to={`/${index}`} state={{ from: location }}>
-                Link to news
+                <p>{article.title}</p>
+                <img src={article.urlToUImage} alt="" />
               </Link>
             </li>
           ))}
