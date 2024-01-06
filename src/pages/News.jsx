@@ -15,7 +15,6 @@ function News() {
       .then((data) => {
         const articles = data.articles || [];
         setNews(articles);
-        // console.log(data);
       })
       .catch((error) => {
         console.log(error);

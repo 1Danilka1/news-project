@@ -16,4 +16,4 @@
 //         "Theres no denying it: Farming had a rough year. Extreme weather spun up storms and floods, unseasonal freezes and baking heat waves, and prolonged parching droughts. In parts of the world in 2023, to… [+3046 chars]",
 //     },
 //   ],
-// };
+// }
