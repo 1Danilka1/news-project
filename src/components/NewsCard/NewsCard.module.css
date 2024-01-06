@@ -4,21 +4,23 @@
     align-items: center;
     border: 1px solid black;
     border-radius: 5px;
-    width: 400px;
-    height: 500px;
+    width: 290px;
+    height: 310px;
 }
 
 .img {
-    width: 400px;
-    height: 250px;
+    width: 290px;
+    height: 150px;
     border-radius: 5px;
 }
 
 .title {
     font: 23px 'Roboto Condensed';
+    text-align: center;
+    margin-top: 15px;
 }
 
-.text {
+/* .text {
     font: 15px 'Roboto Condensed';
     margin-top: 15px;
     text-align: center;
@@ -36,4 +38,4 @@
 .link_to_info:hover {
     color: #c41b34;
     background-color: #fff;
-}
+} */

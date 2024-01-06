@@ -9,14 +9,15 @@ export default function NewsCard({ title, author, about, urlTo, image }) {
       </div>
       <div>
         <h1 className={css.title}>{title}</h1>
-        <p className={css.text}>{about}</p>
+      </div>
+        {/* <p className={css.text}>{about}</p>
         <p className={css.text}>Author: {author}</p>
       </div>
       <div>
           <a href={urlTo} target="blank" className={css.link_to_info}>
             Read more
           </a>
-      </div>
+      </div> */}
     </div>
   );
 }
