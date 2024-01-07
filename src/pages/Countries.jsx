@@ -1,5 +1,11 @@
+import css from './Countries.module.css'
+
 export default function Countries() {
   return (
-    <div>Countries</div>
+    <div className={css.container}>
+      <main className={css.main}>
+        Countries
+      </main>
+    </div>
   )
 }

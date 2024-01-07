@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import NewsCard from "../components/NewsCard/NewsCard";
-import css from "./Home.module.css";
+import css from "./News.module.css";
 import { Link, useLocation } from "react-router-dom";
 
 function News() {
@@ -26,29 +26,31 @@ function News() {
   }, []);
 
   return (
-    <main>
-      <h1 className={css.title}>News from around the world</h1>
-      <p className={css.text}>
-        Here you can see and read news from all world. Enjoy!
-      </p>
-      <div className={css.container}>
-        <ul className={css.list_item}>
-          {news.map((article, index) => (
-            <li key={index}>
-              <Link to={`/${article.source.id}`} state={{ from: location, article: article }}>
-                <NewsCard
-                  title={article.title}
-                  author={article.author}
-                  about={article.description}
-                  urlTo={article.url}
-                  image={article.urlToImage}
-                /> 
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </main>
+    <div className={css.container}> 
+      <main className={css.main}>
+        <h1 className={css.title}>News from around the world</h1>
+        <p className={css.text}>
+          Here you can see and read news from all world. Enjoy!
+        </p>
+        <div className={css.container}>
+          <ul className={css.list_item}>
+            {news.map((article, index) => (
+              <li key={index}>
+                <Link to={`/${article.source.id}`} state={{ from: location, article: article }}>
+                  <NewsCard
+                    title={article.title}
+                    author={article.author}
+                    about={article.description}
+                    urlTo={article.url}
+                    image={article.urlToImage}
+                  /> 
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </main>
+    </div>
   );
 }
 
