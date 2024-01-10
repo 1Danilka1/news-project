@@ -18,18 +18,7 @@
     padding: 10px 0 30px 40px;
 }
 
-.container {
+.container_news {
     display: flex;
     justify-content: center;
-}
-
-.list_item {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    list-style: none;
-}
-
-.list_item li {
-    margin: 0 40px 50px 0;
 }

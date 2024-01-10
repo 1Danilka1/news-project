@@ -7,7 +7,7 @@ export default function NewsCard({ title, image }) {
       <div>
         <img className={css.img} src={image} alt="image-of-news" />
       </div>
-      <div>
+      <div> 
         <h1 className={css.title}>{title}</h1>
       </div>
     </div>
