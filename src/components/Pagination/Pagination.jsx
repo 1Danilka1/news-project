@@ -1,6 +1,7 @@
-import { number } from "prop-types";
+// import { number } from "prop-types";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 function Pagination({ postsPerPage, totalPosts, paginate }) {
   const [activePage, setactivePage] = useState(1);
@@ -10,10 +11,10 @@ function Pagination({ postsPerPage, totalPosts, paginate }) {
     pageNumbers.push(i);
   }
 
-  const handlePageClick = () => {
+  const handlePageClick = (number) => {
     setactivePage(number);
-    paginate(number)
-  }
+    paginate(number);
+  };
 
   return (
     <div>
@@ -21,16 +22,13 @@ function Pagination({ postsPerPage, totalPosts, paginate }) {
         <ul>
           {pageNumbers.map((number) => (
             <li key={number}>
-                <Link to={`/news/${number}`} onClick={() => handlePageClick(number)}>{number}</Link>
-              {/* <a
-                href="!#"
-                onClick={() => {
-                  handlePageClick(number);
-                  paginate = { number };
-                }}
+              <Link
+                to={"/news"}
+                state={{ page: number}}
+                onClick={() => handlePageClick(number)}
               >
                 {number}
-              </a> */}
+              </Link>
             </li>
           ))}
         </ul>
@@ -38,5 +36,11 @@ function Pagination({ postsPerPage, totalPosts, paginate }) {
     </div>
   );
 }
+
+Pagination.propTypes = {
+  postsPerPage: PropTypes.number.isRequired,
+  totalPosts: PropTypes.number.isRequired,
+  paginate: PropTypes.func.isRequired,
+};
 
 export default Pagination;

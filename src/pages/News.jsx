@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import css from "./News.module.css";
 // import { Link, useLocation } from "react-router-dom";
 import FetchNews from "../components/FetchNews/FetchNews";
-import Pagination from '../components/Pagination/Pagination'
+import Pagination from "../components/Pagination/Pagination";
 
 function News() {
   const [news, setNews] = useState([]);
@@ -30,7 +30,7 @@ function News() {
 
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPost = news.slice(indexOfFirstPost, indexOfLastPost)
+  const currentPost = news.slice(indexOfFirstPost, indexOfLastPost);
 
   const paginate = (pageNumber) => setcurrentPage(pageNumber);
 
@@ -42,9 +42,9 @@ function News() {
           Here you can see and read news from all world. Enjoy!
         </p>
         <div className={css.container_news}>
-          <FetchNews news={currentPost}/>
+          <FetchNews news={currentPost} />
         </div>
-        <Pagination 
+        <Pagination
           postsPerPage={postsPerPage}
           totalPosts={news.length}
           paginate={paginate}
@@ -56,27 +56,26 @@ function News() {
 
 export default News;
 
+// const fetchNews = () => {
+//   fetch(
+//     "https://newsapi.org/v2/everything?q=world&apiKey=d526f51e3d9a4f0dba138594e06c3b1f"
+//   )
+//     .then((responce) => responce.json())
+//     .then((data) => {
+//       const articles = data.articles || [];
+//       setNews(articles);
+//     })
+//     .catch((error) => {
+//       console.log(error);
+//     });
+// };
 
-  // const fetchNews = () => {
-  //   fetch(
-  //     "https://newsapi.org/v2/everything?q=world&apiKey=d526f51e3d9a4f0dba138594e06c3b1f"
-  //   )
-  //     .then((responce) => responce.json())
-  //     .then((data) => {
-  //       const articles = data.articles || [];
-  //       setNews(articles);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // };
+// useEffect(() => {
+//   fetchNews();
+// }, []);
 
-  // useEffect(() => {
-  //   fetchNews();
-  // }, []);
-
-
-          {/* <ul className={css.list_item}>
+{
+  /* <ul className={css.list_item}>
             {news.map((article, index) => (
               <li key={index}>
                 <Link
@@ -86,4 +85,5 @@ export default News;
                 </Link>
               </li>
             ))}
-          </ul> */}
+          </ul> */
+}
