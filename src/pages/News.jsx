@@ -8,7 +8,7 @@ import Pagination from "../components/Pagination/Pagination";
 function News() {
   const [news, setNews] = useState([]);
   const [currentPage, setcurrentPage] = useState(1);
-  const [postsPerPage] = useState(12);
+  const [postsPerPage] = useState(16);
 
   const fetchNews = () => {
     fetch(

@@ -1,0 +1,26 @@
+.pagination_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+}
+
+.pagination_item {
+    margin: 30px 10px 50px 0;
+}
+
+.pagination_link {
+    padding: 12px 18px;
+    border-radius: 50%;
+    background-color: #c41b34;
+    color: #fff;
+    font: 15px Montserrat;
+}
+
+.pagination_link:focus {
+    color: #c41b34;
+    background-color: #fff;
+    border: 2px solid #c41b34;
+    font-weight: bold;
+}
+
