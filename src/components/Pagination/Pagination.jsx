@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import css from './Pagination.module.css'
+import css from "./Pagination.module.css";
 
 function Pagination({ postsPerPage, totalPosts, paginate }) {
   const [activePage, setactivePage] = useState(1);
@@ -24,7 +24,7 @@ function Pagination({ postsPerPage, totalPosts, paginate }) {
             <li key={number} className={css.pagination_item}>
               <Link
                 to={"/news"}
-                state={{ page: number}}
+                state={{ page: number }}
                 onClick={() => handlePageClick(number)}
                 className={css.pagination_link}
               >

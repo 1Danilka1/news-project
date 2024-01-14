@@ -16,9 +16,6 @@ function FetchNews({ news: newsProp }) {
                 >
                   <NewsCard
                       title={article.title}
-                      author={article.author}
-                      about={article.description}
-                      urlTo={article.url}
                       image={article.urlToImage}
                     />
                 </Link>
