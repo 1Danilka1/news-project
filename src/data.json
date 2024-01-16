@@ -1,0 +1,42 @@
+[
+    {
+      "label": "--Select the country to read news--",
+      "value": "nothing"
+    },
+    {
+      "label": "USA",
+      "value": "us"
+    },
+    {
+      "label": "Germany",
+      "value": "de"
+    },
+    {
+      "label": "Ukraine",
+      "value": "ua"
+    },
+    {
+      "label": "France",
+      "value": "fr"
+    },
+    {
+      "label": "Czech Republic",
+      "value": "cz"
+    },
+    {
+      "label": "Canada",
+      "value": "ca"
+    },
+    {
+      "label": "Japan",
+      "value": "jp"
+    },
+    {
+      "label": "Australia",
+      "value": "au"
+    },
+    {
+      "label": "Belgium",
+      "value": "be"
+    }
+  ]

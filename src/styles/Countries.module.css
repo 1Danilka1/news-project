@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  
+}
+
+.main {
+    flex: 1; 
+}
+
+.title {
+    text-align: center;
+    color: #c41b34;
+    font: 40px 'Roboto Condensed';
+    font-weight: 500;
+    margin-top: 40px;
+}
+
+.container_select {
+    display: flex;
+    justify-content: center;
+}
+
+.select_country {
+    color: #030f57;
+    border: 1px solid #030f57;
+    padding: 6px;
+    border-radius: 10px;
+    font: 15px 'Roboto Condensed';
+    text-align: center;
+    margin-top: 20px;
+}
+
+.news_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    margin-top: 40px;
+}
+
+.news_list li {
+    margin: 0 40px 50px 0;
+}
+
+.container_loader {
+    display: flex;
+    justify-content: center;
+}

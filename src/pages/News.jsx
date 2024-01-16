@@ -1,16 +1,17 @@
 import { useEffect, useState } from "react";
-// import NewsCard from "../components/NewsCard/NewsCard";
-import css from "./News.module.css";
-// import { Link, useLocation } from "react-router-dom";
+import css from "../styles/News.module.css";
 import FetchNews from "../components/FetchNews/FetchNews";
 import Pagination from "../components/Pagination/Pagination";
+import { ThreeDots } from "react-loader-spinner";
 
 function News() {
   const [news, setNews] = useState([]);
   const [currentPage, setcurrentPage] = useState(1);
   const [postsPerPage] = useState(16);
+  const [isLoading, setIsLoading] = useState(false);
 
   const fetchNews = () => {
+    setIsLoading(true);
     fetch(
       "https://newsapi.org/v2/everything?q=world&apiKey=d526f51e3d9a4f0dba138594e06c3b1f"
     )
@@ -18,9 +19,11 @@ function News() {
       .then((data) => {
         const articles = data.articles || [];
         setNews(articles);
+        setIsLoading(false);
       })
       .catch((error) => {
         console.log(error);
+        setIsLoading(false);
       });
   };
 
@@ -42,6 +45,16 @@ function News() {
           Here you can see and read news from all world. Enjoy!
         </p>
         <div className={css.container_news}>
+          {isLoading ? (
+            <ThreeDots
+              visible={true}
+              height="80"
+              width="80"
+              color="#c41b34"
+              radius="9"
+              ariaLabel="three-dots-loading"
+            />
+          ) : null}
           <FetchNews news={currentPost} />
         </div>
         <Pagination
@@ -55,35 +68,3 @@ function News() {
 }
 
 export default News;
-
-// const fetchNews = () => {
-//   fetch(
-//     "https://newsapi.org/v2/everything?q=world&apiKey=d526f51e3d9a4f0dba138594e06c3b1f"
-//   )
-//     .then((responce) => responce.json())
-//     .then((data) => {
-//       const articles = data.articles || [];
-//       setNews(articles);
-//     })
-//     .catch((error) => {
-//       console.log(error);
-//     });
-// };
-
-// useEffect(() => {
-//   fetchNews();
-// }, []);
-
-{
-  /* <ul className={css.list_item}>
-            {news.map((article, index) => (
-              <li key={index}>
-                <Link
-                  to={`/${article.source.id}`}
-                  state={{ from: location, article: article }}
-                >
-                </Link>
-              </li>
-            ))}
-          </ul> */
-}

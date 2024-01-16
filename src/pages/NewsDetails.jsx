@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation, useParams } from "react-router-dom";
 import { SlArrowLeft } from "react-icons/sl";
-import css from './NewsDetails.module.css'
+import css from '../styles/NewsDetails.module.css'
 
 export default function NewsDetails() {
   const [article, setArticle] = useState({});
