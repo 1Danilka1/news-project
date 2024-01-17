@@ -23,7 +23,7 @@ function Pagination({ postsPerPage, totalPosts, paginate }) {
           {pageNumbers.map((number) => (
             <li key={number} className={css.pagination_item}>
               <Link
-                to={"/news"}
+                to={`/`}
                 state={{ page: number }}
                 onClick={() => handlePageClick(number)}
                 className={css.pagination_link}
