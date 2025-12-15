@@ -17,7 +17,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/news-project/', // имя твоего репозитория на GitHub
+  base: '/news-react-router/', 
   build: {
     rollupOptions: {
       output: {
